@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::view('/', 'welcome')->name('home');
+Route::view('/', 'vista-general')->name('home');
 Route::view('detalle-1', 'vista-detalle-1')->name('vista-detalle-1');
 
 Route::middleware(['auth', 'verified'])->group(function () {
