@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,24 +9,36 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap');
+
         body {
             font-family: 'Inter', sans-serif;
             background-color: #f8fafc;
         }
+
         .node-card:hover {
             transform: translateY(-5px) scale(1.02);
             border-color: #3b82f6;
             box-shadow: 0 10px 15px -3px rgba(59, 130, 246, 0.1);
         }
+
         .pulse-icon {
             animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
         }
+
         @keyframes pulse {
-            0%, 100% { opacity: 1; }
-            50% { opacity: .5; }
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: .5;
+            }
         }
     </style>
 </head>
+
 <body class="p-4 md:p-8 text-slate-900">
 
     <div class="max-w-6xl mx-auto">
@@ -33,15 +46,16 @@
         <header class="mb-12 text-center">
             <h1 class="text-3xl md:text-4xl font-extrabold text-slate-800 mb-2 italic">Arquitectura Laravel de Alto Rendimiento</h1>
             <p class="text-slate-600 max-w-2xl mx-auto">Ecosistema diseñado para tráfico masivo (millones de requests) y procesamiento de datos críticos bajo estándares de seguridad.</p>
+            <p href="{{ route('vista-detalle-1') }}" class="text-slate-600 max-w-2xl mx-auto" Ir a detalle></p>
         </header>
 
         <!-- Main Diagram Grid -->
         <div class="grid grid-cols-1 md:grid-cols-4 gap-6 items-start">
-            
+
             <!-- Capa de Entrada -->
             <div class="space-y-6">
                 <h2 class="text-xs font-bold text-slate-400 uppercase tracking-widest text-center mb-4">Entrada & Red</h2>
-                
+
                 <!-- Cloudflare -->
                 <div class="node-card bg-white p-4 rounded-xl border-2 border-gray-100 transition-all duration-300">
                     <div class="flex items-center gap-3 mb-2">
@@ -74,7 +88,7 @@
             <!-- Capa de Aplicación (Central) -->
             <div class="md:col-span-2 space-y-6">
                 <h2 class="text-xs font-bold text-slate-400 uppercase tracking-widest text-center mb-4">Capa de Aplicación (Laravel Octane)</h2>
-                
+
                 <div class="bg-white p-6 rounded-3xl border-2 border-dashed border-blue-200 grid grid-cols-1 sm:grid-cols-2 gap-4 relative">
                     <div class="absolute top-4 right-4 pulse-icon">
                         <i class="fa-solid fa-bolt text-yellow-400"></i>
@@ -162,7 +176,7 @@
             <!-- Capa de Datos -->
             <div class="space-y-6">
                 <h2 class="text-xs font-bold text-slate-400 uppercase tracking-widest text-center mb-4">Persistencia & Caché</h2>
-                
+
                 <!-- Database -->
                 <div class="node-card bg-white p-4 rounded-xl border-2 border-blue-500 bg-blue-50/30 transition-all duration-300">
                     <div class="flex items-center gap-3 mb-2">
@@ -248,4 +262,5 @@
     </div>
 
 </body>
+
 </html>
