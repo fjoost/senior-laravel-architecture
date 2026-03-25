@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::view('/', 'vista-general')->name('home');
 Route::view('detalle-1', 'vista-detalle-1')->name('vista-detalle-1');
+Route::view('detalle-2', 'vista-detalle-2')->name('vista-detalle-2');
 
 Route::middleware(['auth', 'verified'])->group(function () {
     Route::view('dashboard', 'dashboard')->name('dashboard');
